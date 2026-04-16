@@ -1,0 +1,21 @@
+{
+  "config": "configs/projects/CLIPFSAR/hmdb51/loss_p_rn50.yaml",
+  "checkpoint": "output/vit/vit_5shot_tem0.2/checkpoint_epoch_00001.pyth",
+  "backbone_name": "ViT-B/16",
+  "use_amp": true,
+  "target_layer": "head.backbone.conv1",
+  "episode_index": 0,
+  "query_index": 2,
+  "frame_index": -1,
+  "score_mode": "gt",
+  "pred_episode_class": 0,
+  "gt_episode_class": 0,
+  "target_episode_class": 0,
+  "pred_real_class": 20,
+  "gt_real_class": 20,
+  "target_real_class": 20,
+  "pred_name": "a person sits on a horse then moves with the horse as it walks or runs",
+  "gt_name": "a person sits on a horse then moves with the horse as it walks or runs",
+  "target_name": "a person sits on a horse then moves with the horse as it walks or runs",
+  "save_root": "gradcam/loss_p_rn50/episode_0000/query_002"
+}

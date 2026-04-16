@@ -1,0 +1,21 @@
+{
+  "config": "configs/projects/CLIPFSAR/hmdb51/loss_p_rn50.yaml",
+  "checkpoint": "output/vit/vit_5shot_tem0.2/checkpoint_epoch_00001.pyth",
+  "backbone_name": "ViT-B/16",
+  "use_amp": true,
+  "target_layer": "head.backbone.conv1",
+  "episode_index": 2,
+  "query_index": 4,
+  "frame_index": -1,
+  "score_mode": "gt",
+  "pred_episode_class": 3,
+  "gt_episode_class": 3,
+  "target_episode_class": 3,
+  "pred_real_class": 3,
+  "gt_real_class": 3,
+  "target_real_class": 3,
+  "pred_name": "a person raises both hands then brings the palms together to clap",
+  "gt_name": "a person raises both hands then brings the palms together to clap",
+  "target_name": "a person raises both hands then brings the palms together to clap",
+  "save_root": "gradcam/loss_p_rn50/episode_0002/query_004"
+}

@@ -1,0 +1,20 @@
+{
+  "config": "configs/projects/CLIPFSAR/ssv2_small/CLIPFSAR_SSv2_small_1shot_v1.yaml",
+  "checkpoint": "output_small/CLIPFSAR_SSv2_Small_1shot/checkpoints/checkpoint_epoch_00010.pyth",
+  "backbone_name": "ViT-B/16",
+  "target_layer": "head.backbone.conv1",
+  "episode_index": 4,
+  "query_index": 1,
+  "frame_index": -1,
+  "score_mode": "gt",
+  "pred_episode_class": 2,
+  "gt_episode_class": 2,
+  "target_episode_class": 2,
+  "pred_real_class": 15,
+  "gt_real_class": 15,
+  "target_real_class": 15,
+  "pred_name": "[something] is held above a surface then lowered and placed down onto it",
+  "gt_name": "[something] is held above a surface then lowered and placed down onto it",
+  "target_name": "[something] is held above a surface then lowered and placed down onto it",
+  "save_root": "gradcam/CLIPFSAR_SSv2_small_1shot_v1/episode_0004/query_001"
+}

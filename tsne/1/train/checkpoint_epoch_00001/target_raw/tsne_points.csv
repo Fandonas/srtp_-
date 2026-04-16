@@ -1,0 +1,31 @@
+x,y,label_id,label_name,source,episode_index
+12.141446,-19.730309,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,0
+35.573166,4.7683535,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,0
+-2.9518352,-6.5051236,20,a person sits on a horse then moves with the horse as it walks or runs,target,0
+31.859076,30.45821,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,0
+-16.255861,-71.36417,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,0
+2.5165248,-36.246147,23,a person lies down on their back then curls the body upward in a situp,target,0
+38.432148,-13.947984,3,a person raises both hands then brings the palms together to clap,target,0
+7.307898,7.416232,23,a person lies down on their back then curls the body upward in a situp,target,0
+-18.880032,14.444004,3,a person raises both hands then brings the palms together to clap,target,0
+-25.55007,-32.485607,20,a person sits on a horse then moves with the horse as it walks or runs,target,0
+25.95483,-37.3487,14,a person bends their knees then pushes off the ground to jump,target,1
+11.55175,21.44977,2,a person bites food with their teeth then chews it up and down,target,1
+5.1785254,-48.848312,21,two people extend their hands then grasp and shake hands,target,1
+24.092548,42.900097,2,a person bites food with their teeth then chews it up and down,target,1
+-33.865223,92.769455,27,a person pulls an arm backward then swings it forward to throw an object,target,1
+77.15979,51.980923,22,a person raises a bow then pulls back the string and releases an arrow,target,1
+3.7617974,37.184723,21,two people extend their hands then grasp and shake hands,target,1
+23.246738,-12.057196,14,a person bends their knees then pushes off the ground to jump,target,1
+-12.060324,29.610891,27,a person pulls an arm backward then swings it forward to throw an object,target,1
+-60.01864,-15.379303,22,a person raises a bow then pulls back the string and releases an arrow,target,1
+26.347609,15.542851,26,a person practices with a sword then performs repeated training movements as exercise,target,2
+-2.8301282,-25.591404,11,a person jumps backward then flips over in a flic flac motion,target,2
+-33.977474,5.7984324,15,a person leans forward then touches lips to another person for a kiss,target,2
+-3.8331482,12.742907,10,a person loses balance then falls down onto the floor,target,2
+14.407628,-3.3973827,10,a person loses balance then falls down onto the floor,target,2
+-17.339714,-18.596043,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,2
+-57.315327,36.921417,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,2
+13.815446,52.4766,26,a person practices with a sword then performs repeated training movements as exercise,target,2
+-18.585411,-3.3084116,11,a person jumps backward then flips over in a flic flac motion,target,2
+-25.805298,38.41899,15,a person leans forward then touches lips to another person for a kiss,target,2

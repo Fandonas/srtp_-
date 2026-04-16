@@ -1,0 +1,93 @@
+_BASE: ../OTAM_base.yaml
+TASK_TYPE: few_shot_action
+TRAIN:
+  ENABLE: true
+  USE_CLASSIFICATION: true
+  USE_CLASSIFICATION_VALUE: 1.2
+  DATASET_FEW: HMDB_few_shot
+  DATASET: Ssv2_few_shot
+  META_BATCH: true  # meta or not
+  NUM_SAMPLES: 1000000
+  WAY: 5
+  SHOT: 1
+  QUERY_PER_CLASS: 5 #5
+  QUERY_PER_CLASS_TEST: 1
+  NUM_TRAIN_TASKS: 7000
+  NUM_TEST_TASKS: 10000
+  VAL_FRE_ITER: 300 #300
+  BATCH_SIZE: 1  # Same with NUM_GPUS
+  # CLASS_NAME: ['brush hair', 'catch', 'chew', 'clap', 'climb', 'climb stairs', 'dive', 'draw_sword', 'dribble', 'drink', 'fall floor', 'flic flac', 'handstand', 'hug', 'jump', 'kiss', 'pullup', 'punch', 'push', 'ride_bike', 'ride horse', 'shake_hands', 'shoot_bow', 'situp', 'stand', 'sword', 'sword exercise', 'throw', 'turn', 'walk', 'wave']
+  CLASS_NAME: ["a person raises a brush to their head then moves the brush through their hair repeatedly", "a person focuses on a moving object then reaches out hands to catch it", "a person bites food with their teeth then chews it up and down", "a person raises both hands then brings the palms together to clap", "a person grips a surface then pulls their body upward to climb", "a person steps onto the first stair then continues walking up the staircase", "a person bends at the edge of a platform then jumps forward into the water to dive", "a person reaches for the sword handle then pulls the sword out of its sheath", "a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble", "a person lifts a drink to their mouth then tilts the container to drink", "a person loses balance then falls down onto the floor", "a person jumps backward then flips over in a flic flac motion", "a person places hands on the ground then kicks legs up into a handstand", "a person opens their arms then wraps them around another person for a hug", "a person bends their knees then pushes off the ground to jump", "a person leans forward then touches lips to another person for a kiss", "a person grips a bar above then pulls their body upward in a pullup", "a person pulls back a fist then extends the arm forward to punch", "a person places hands on an object then extends arms to push it away", "a person sits on a bicycle then pedals forward to ride the bike", "a person sits on a horse then moves with the horse as it walks or runs", "two people extend their hands then grasp and shake hands", "a person raises a bow then pulls back the string and releases an arrow", "a person lies down on their back then curls the body upward in a situp", "a person moves from sitting then straightens legs to stand upright", "a person holds a sword in hand then swings the blade through the air", "a person practices with a sword then performs repeated training movements as exercise", "a person pulls an arm backward then swings it forward to throw an object", "a person faces one direction then rotates the body to turn", "a person steps forward with one foot then shifts weight and steps with the other to walk", "a person lifts a hand then moves it side to side to wave"]
+  BATCH_SIZE_PER_TASK: 1 #改 本来：4
+  CHECKPOINT_FILE_PATH: ""
+  EVAL_PERIOD: 2
+  NUM_FOLDS: 1
+  TEXT_COFF: 0.9
+  COMBINE: true
+AUGMENTATION:
+  COLOR_AUG: false
+  NO_RANDOM_ERASE: true
+
+TEST:
+  ENABLE: false
+  DATASET: Ssv2_few_shot
+  BATCH_SIZE: 1  # Same with NUM_GPUS
+  TEST_SET: val
+  # CLASS_NAME: ['fencing', 'kick', 'kick ball', 'pick', 'pour', 'pushup', 'run', 'sit', 'smoke', 'talk']
+  CLASS_NAME: ["two people hold fencing blades then lunge and parry to score touches", "a person lifts a leg then swings it forward to kick", "a person runs toward a ball then swings a foot to kick the ball", "a person bends down then picks up an object from the ground", "a person lifts a container then tilts it to pour liquid out", "a person lowers the chest toward the ground then pushes the body back up in a pushup", "a person starts moving forward then repeatedly pushes off the ground to run", "a person bends their knees then lowers the body onto a seat to sit", "a person holds a cigarette then inhales and exhales smoke", "a person faces another person then moves lips and speaks to talk"]
+  #CLASS_NAME: ["Lunging blade forward to score a touch in combat","Swinging leg outward to strike with the foot","Striking ball with foot to propel it forward","Grasping object between fingers to lift it","Tilting container to let liquid flow out","Raising and lowering body on arms to build strength","Moving legs rapidly to travel faster than walking","Lowering body onto a surface to rest on it","Inhaling and exhaling smoke from a burning substance","Speaking words to communicate with another person"]
+  NUM_ENSEMBLE_VIEWS: 1
+  SPATIAL_CROPS: cctltr
+  AUTOMATIC_MULTI_SCALE_TEST: false
+  UPLOAD_CLASSIFIER_RESULTS: true
+
+DATA:
+#  DATA_ROOT_DIR: /mnt/workspace/hmdb51/
+#  ANNO_DIR: ./configs/projects/CLIPFSAR/hmdb51/
+  DATA_ROOT_DIR: /workdir1.8t/zhongcc/data/test1/hmdb51/
+  ANNO_DIR: ./configs/projects/CLIPFSAR/hmdb51/ #改
+  NUM_INPUT_FRAMES: 4 #8 改
+  SAMPLING_RATE: 50
+  # SAMPLING_RATE_TRAIN: 3
+  SAMPLING_UNIFORM: false
+  TRAIN_JITTER_SCALES: [256, 256]
+  MEAN: [0.48145466, 0.4578275, 0.40821073]
+  STD: [0.26862954, 0.26130258, 0.27577711]
+  TRAIN_CROP_SIZE: 224 # 84  # 224
+  TEST_CROP_SIZE: 224
+  TEST_SCALE: 256
+  TEST_CENTER_CROP: true
+  CLIP_INTERVAL: 8
+  FPS: 12
+  TARGET_FPS: 12
+
+
+LOG_PERIOD: 50
+SOLVER:
+  BASE_LR: 0.00001  # 0.0001 # 0.0005
+  LR_POLICY: steps_with_relative_lrs
+  STEPS_ITER: 700 #每个epoch多少的tier
+  STEPS: [0, 4, 6]
+  LRS: [1, 0.1, 0.01]
+  MAX_EPOCH: 10
+  MOMENTUM: 0.9
+  WEIGHT_DECAY: 5e-5
+  WARMUP_EPOCHS: 1
+  WARMUP_START_LR: 0.000001
+  OPTIM_METHOD: adam
+  DAMPENING: 0.0
+  NESTEROV: true
+# add bn, use same lr settings as server
+
+VIDEO:
+  HEAD:
+    NAME: CNN_OTAM_CLIPFSAR  
+    BACKBONE_NAME: "RN50"
+    
+  BACKBONE:
+    META_ARCH: Identity
+
+#NUM_GPUS: 4
+NUM_GPUS: 1 #改
+OUTPUT_DIR: output/CLIPFSAR_HMDB51_1shot
+

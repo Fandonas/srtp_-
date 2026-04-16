@@ -1,0 +1,20 @@
+{
+  "config": "configs/projects/CLIPFSAR/ssv2_small/CLIPFSAR_SSv2_small_1shot_v1.yaml",
+  "checkpoint": "output_small/CLIPFSAR_SSv2_Small_1shot/checkpoints/checkpoint_epoch_00010.pyth",
+  "backbone_name": "ViT-B/16",
+  "target_layer": "head.backbone.conv1",
+  "episode_index": 2,
+  "query_index": 2,
+  "frame_index": -1,
+  "score_mode": "gt",
+  "pred_episode_class": 1,
+  "gt_episode_class": 1,
+  "target_episode_class": 1,
+  "pred_real_class": 2,
+  "gt_real_class": 2,
+  "target_real_class": 2,
+  "pred_name": "[somewhere] is approached as if [something] is being taken from it then the motion stops and nothing is removed",
+  "gt_name": "[somewhere] is approached as if [something] is being taken from it then the motion stops and nothing is removed",
+  "target_name": "[somewhere] is approached as if [something] is being taken from it then the motion stops and nothing is removed",
+  "save_root": "gradcam/CLIPFSAR_SSv2_small_1shot_v1/episode_0002/query_002"
+}

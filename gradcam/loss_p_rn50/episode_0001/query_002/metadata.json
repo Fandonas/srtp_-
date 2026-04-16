@@ -1,0 +1,21 @@
+{
+  "config": "configs/projects/CLIPFSAR/hmdb51/loss_p_rn50.yaml",
+  "checkpoint": "output/vit/vit_5shot_tem0.2/checkpoint_epoch_00001.pyth",
+  "backbone_name": "ViT-B/16",
+  "use_amp": true,
+  "target_layer": "head.backbone.conv1",
+  "episode_index": 1,
+  "query_index": 2,
+  "frame_index": -1,
+  "score_mode": "gt",
+  "pred_episode_class": 2,
+  "gt_episode_class": 2,
+  "target_episode_class": 2,
+  "pred_real_class": 13,
+  "gt_real_class": 13,
+  "target_real_class": 13,
+  "pred_name": "a person opens their arms then wraps them around another person for a hug",
+  "gt_name": "a person opens their arms then wraps them around another person for a hug",
+  "target_name": "a person opens their arms then wraps them around another person for a hug",
+  "save_root": "gradcam/loss_p_rn50/episode_0001/query_002"
+}

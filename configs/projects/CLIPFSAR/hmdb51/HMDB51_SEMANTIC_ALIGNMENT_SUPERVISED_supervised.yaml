@@ -1,0 +1,220 @@
+# =============================================================================
+# 全监督学习语义对齐模型配置文件
+# 基于原始CLIP-FSAR模型，添加语义对齐功能，改为全监督学习
+# =============================================================================
+
+# 基础配置文件路径（参考原始项目结构）
+_BASE: ../../../projects/CLIPFSAR/OTAM_base.yaml
+
+# 任务类型：全监督动作识别（从few_shot_action改为supervised_action）
+TASK_TYPE: supervised_action
+
+# =============================================================================
+# 训练配置 (TRAIN) - 保持与原始项目的一致性
+# =============================================================================
+TRAIN:
+  ENABLE: true
+  USE_CLASSIFICATION: true  # 启用分类损失（视觉-文本对比学习）
+  USE_CLASSIFICATION_VALUE: 1.2  # 分类损失权重（与原始项目一致）
+  
+  # 全监督学习参数（替代few-shot参数）
+  BATCH_SIZE: 2  # 全监督学习的批次大小（进一步减少内存使用）
+  EPOCHS: 300  # 训练轮数（与原始项目一致）
+  # LEARNING_RATE: 0.0002  # 学习率（与原始项目一致）
+  LEARNING_RATE: 0.002  # 学习率（与原始项目一致）
+  WEIGHT_DECAY: 0.001  # 权重衰减（与原始项目一致）
+  MOMENTUM: 0.9  # 动量（与原始项目一致）
+  
+  # 优化器配置（与原始项目一致）
+  OPTIMIZER: "adam"  # 优化器（与原始项目一致）
+  NESTEROV: true  # Nesterov动量
+  
+  # 学习率调度（与原始项目一致）
+  LR_SCHEDULER: "cosine"
+  WARMUP_EPOCHS: 10
+  MIN_LR: 0.000001
+  
+  # 语义对齐损失权重（参考原始CLIPFSAR在HMDB51上的权重设置1.2，采用保守调整0.5）
+  SEMANTIC_LOSS_WEIGHT: 0.5
+  
+  # 梯度裁剪
+  GRAD_CLIP_NORM: 1.0
+  
+  # 保存和验证频率
+  SAVE_FREQ: 10
+  VAL_FREQ: 5
+  PRINT_FREQ: 10
+  
+  # 扩展的类别名称 - 语义对齐的核心（全监督学习：使用完整的51个HMDB51类别）
+  CLASS_NAME: ['Running fingers or brush through hair repeatedly, then moving from scalp to ends in smooth strokes', 'Placing hands on the ground sideways, then rotating the body in a circular motion while maintaining contact', 'Following the trajectory of an airborne object, then hands successfully intercept and secure it', 'Placing food in mouth, then jaw moves rhythmically to process and break down the substance', 'Bringing palms together with force, then creating a sharp sound that echoes through the space', 'Reaching upward to find secure grips, then pushing with feet to lift body weight higher', 'Stepping onto the first level, then continuing to ascend each subsequent step to reach the top', 'Positioning at the platform edge, then launching headfirst into the water below', 'Grasping the sword handle firmly, then drawing the blade free from its protective sheath', 'Dropping the ball to the ground, then it bounces back up to be caught and released again', 'Raising the container to mouth level, then allowing liquid to flow smoothly into the opening', 'Bringing food to the mouth, then teeth and tongue work together to consume the substance', 'Losing balance and control, then the body falls to the ground surface', 'Holding the sword in combat stance, then executing precise thrusting and parrying movements', 'Beginning in upright position, then arching backward to complete a full backward somersault', 'Positioning the club behind the ball, then swinging forward to strike and send it flying', 'Planting hands firmly on ground, then raising legs to balance entire body weight upside down', 'Drawing arm back to build power, then releasing a forceful strike toward the target', 'Opening arms wide, then closing them around another in a warm, protective embrace', 'Bending knees to prepare, then exploding upward with leg power to reach maximum height', 'Lifting the leg high, then snapping it forward to strike with precise force', 'Approaching the ball with foot raised, then making contact to send the ball flying', 'Moving face close to another, then lips meet in a brief, tender connection', 'Opening the mouth wide, then producing rhythmic sounds of joy and amusement', 'Reaching toward the object, then fingers close around it to lift the object away', 'Tilting the container at an angle, then liquid flows smoothly into the receiving vessel', 'Gripping the horizontal bar, then pulling with arms until the body rises above the bar', 'Drawing arm back to build power, then releasing a forceful punch toward the target', 'Placing hands against the object, then applying steady pressure to push the object away', 'Placing hands on the ground, then lowering and raising the body through arm strength', 'Settling into the bicycle seat, then using legs to pedal and hands to guide direction', 'Mounting the horses back, then using legs and reins to direct the animals movement', 'Moving legs in rapid succession, then covering distance quickly with each forward step', 'Extending hand forward, then grasping anothers hand and moving it in greeting', 'Aiming the ball toward the basket, then releasing it with precise trajectory and force', 'Drawing the bowstring back with tension, then releasing to send arrow toward target', 'Aiming the weapon at the target, then pulling the trigger to release the projectile', 'Bending at the knees and waist, then the body settles into a seated position', 'Lying flat on the surface, then contracting core muscles to raise torso upward', 'Curving the lips upward, then eyes crinkle to express happiness and warmth', 'Holding the smoking device, then inhaling and exhaling smoke in controlled rhythm', 'Tucking the head and rolling forward, then completing a full rotation on the ground', 'Rising from a lower position, then standing upright until the body is balanced on feet', 'Cocking the arm back behind the body, then whipping forward to launch the object', 'Wielding the sword with purpose, then moving it through various combat-ready positions', 'Holding the sword steadily, then executing a series of coordinated training movements', 'Opening the mouth to form words, then vocal cords produce sounds for communication', 'Cocking the arm back behind the body, then whipping forward to launch the object', 'Rotating around a central axis, then continuing the circular motion in smooth rhythm', 'Lifting one foot from ground, then placing it forward to advance the bodys position', 'Raising hand above the head, then moving it back and forth to create a visible signal']
+
+# =============================================================================
+# 数据增强配置 (AUGMENTATION) - 与原始项目保持一致
+# =============================================================================
+AUGMENTATION:
+  COLOR_AUG: false  # 禁用颜色增强（与原始项目一致）
+  NO_RANDOM_ERASE: true  # 禁用随机擦除（与原始项目一致）
+  BRIGHTNESS: 0.5
+  CONTRAST: 0.5
+  SATURATION: 0.5
+  HUE: 0.25
+  GRAYSCALE: 0.3
+  GRAY_FIRST: true
+  CONSISTENT: true
+  SHUFFLE: true
+  RATIO: [0.857142857142857, 1.1666666666666667]
+  USE_GPU: false
+  
+  # Mixup和CutMix增强（禁用，与原始项目一致）
+  MIXUP:
+    ENABLE: false
+    ALPHA: 0.0
+    PROB: 1.0
+    MODE: batch
+    SWITCH_PROB: 0.5
+  
+  CUTMIX:
+    ENABLE: false
+    ALPHA: 0.0
+    MINMAX: null
+  
+  LABEL_SMOOTHING: 0.0
+  SSV2_FLIP: false
+  IS_SPLIT: false
+
+# =============================================================================
+# 数据配置 (DATA) - 与原始项目保持一致
+# =============================================================================
+DATA:
+  DATA_ROOT_DIR: /home/u/CLIP-FSAR/data/hmdb51/  # 数据根目录
+  ANNO_DIR: ./configs/projects/CLIPFSAR/hmdb51/   # 标注文件目录
+  NUM_INPUT_FRAMES: 8  # 输入帧数（与原始项目一致）
+  SAMPLING_RATE: 50    # 采样率（与原始项目一致）
+  SAMPLING_UNIFORM: false  # 禁用均匀采样（与原始项目一致）
+  
+  # 图像预处理配置（与原始项目保持一致）
+  TRAIN_JITTER_SCALES: [256, 256]  # 训练时图像尺寸
+  MEAN: [0.48145466, 0.4578275, 0.40821073]  # 图像均值（CLIP预训练时的均值）
+  STD: [0.26862954, 0.26130258, 0.27577711]   # 图像标准差（CLIP预训练时的标准差）
+  TRAIN_CROP_SIZE: 224  # 训练裁剪尺寸（与原始项目一致）
+  TEST_CROP_SIZE: 224   # 测试裁剪尺寸（与原始项目一致）
+  TEST_SCALE: 256       # 测试缩放尺寸（与原始项目一致）
+  
+  # 全监督学习数据加载参数
+  BATCH_SIZE: 2
+  NUM_WORKERS: 4
+  PIN_MEMORY: true
+
+# =============================================================================
+# 测试配置 (TEST) - 与原始项目保持一致
+# =============================================================================
+TEST:
+  ENABLE: false  # 禁用测试模式（仅用于训练）
+  DATASET: Ssv2_few_shot  # 测试数据集（保持原始项目结构）
+  BATCH_SIZE: 2  # 测试批次大小
+  TEST_SET: val  # 测试集名称
+  NUM_ENSEMBLE_VIEWS: 1  # 集成视图数量
+  SPATIAL_CROPS: cctltr  # 空间裁剪类型
+  AUTOMATIC_MULTI_SCALE_TEST: false  # 禁用自动多尺度测试
+  UPLOAD_CLASSIFIER_RESULTS: true  # 上传分类结果
+  
+  # 测试集类别名称（全监督学习：与TRAIN部分使用相同的51个类别）
+  CLASS_NAME: ['Running fingers or brush through hair repeatedly, then moving from scalp to ends in smooth strokes', 'Placing hands on the ground sideways, then rotating the body in a circular motion while maintaining contact', 'Following the trajectory of an airborne object, then hands successfully intercept and secure it', 'Placing food in mouth, then jaw moves rhythmically to process and break down the substance', 'Bringing palms together with force, then creating a sharp sound that echoes through the space', 'Reaching upward to find secure grips, then pushing with feet to lift body weight higher', 'Stepping onto the first level, then continuing to ascend each subsequent step to reach the top', 'Positioning at the platform edge, then launching headfirst into the water below', 'Grasping the sword handle firmly, then drawing the blade free from its protective sheath', 'Dropping the ball to the ground, then it bounces back up to be caught and released again', 'Raising the container to mouth level, then allowing liquid to flow smoothly into the opening', 'Bringing food to the mouth, then teeth and tongue work together to consume the substance', 'Losing balance and control, then the body falls to the ground surface', 'Holding the sword in combat stance, then executing precise thrusting and parrying movements', 'Beginning in upright position, then arching backward to complete a full backward somersault', 'Positioning the club behind the ball, then swinging forward to strike and send it flying', 'Planting hands firmly on ground, then raising legs to balance entire body weight upside down', 'Drawing arm back to build power, then releasing a forceful strike toward the target', 'Opening arms wide, then closing them around another in a warm, protective embrace', 'Bending knees to prepare, then exploding upward with leg power to reach maximum height', 'Lifting the leg high, then snapping it forward to strike with precise force', 'Approaching the ball with foot raised, then making contact to send the ball flying', 'Moving face close to another, then lips meet in a brief, tender connection', 'Opening the mouth wide, then producing rhythmic sounds of joy and amusement', 'Reaching toward the object, then fingers close around it to lift the object away', 'Tilting the container at an angle, then liquid flows smoothly into the receiving vessel', 'Gripping the horizontal bar, then pulling with arms until the body rises above the bar', 'Drawing arm back to build power, then releasing a forceful punch toward the target', 'Placing hands against the object, then applying steady pressure to push the object away', 'Placing hands on the ground, then lowering and raising the body through arm strength', 'Settling into the bicycle seat, then using legs to pedal and hands to guide direction', 'Mounting the horses back, then using legs and reins to direct the animals movement', 'Moving legs in rapid succession, then covering distance quickly with each forward step', 'Extending hand forward, then grasping anothers hand and moving it in greeting', 'Aiming the ball toward the basket, then releasing it with precise trajectory and force', 'Drawing the bowstring back with tension, then releasing to send arrow toward target', 'Aiming the weapon at the target, then pulling the trigger to release the projectile', 'Bending at the knees and waist, then the body settles into a seated position', 'Lying flat on the surface, then contracting core muscles to raise torso upward', 'Curving the lips upward, then eyes crinkle to express happiness and warmth', 'Holding the smoking device, then inhaling and exhaling smoke in controlled rhythm', 'Tucking the head and rolling forward, then completing a full rotation on the ground', 'Rising from a lower position, then standing upright until the body is balanced on feet', 'Cocking the arm back behind the body, then whipping forward to launch the object', 'Wielding the sword with purpose, then moving it through various combat-ready positions', 'Holding the sword steadily, then executing a series of coordinated training movements', 'Opening the mouth to form words, then vocal cords produce sounds for communication', 'Cocking the arm back behind the body, then whipping forward to launch the object', 'Rotating around a central axis, then continuing the circular motion in smooth rhythm', 'Lifting one foot from ground, then placing it forward to advance the bodys position', 'Raising hand above the head, then moving it back and forth to create a visible signal']
+
+# =============================================================================
+# 视频模型配置 (VIDEO) - 与原始项目保持一致
+# =============================================================================
+VIDEO:
+  # 骨干网络配置
+  BACKBONE:
+    DEPTH: null
+    META_ARCH: Identity
+    NUM_FILTERS: null
+    NUM_INPUT_CHANNELS: 3
+    NUM_OUT_FEATURES: null
+    KERNEL_SIZE: null
+    DOWNSAMPLING: null
+    DOWNSAMPLING_TEMPORAL: null
+    NUM_STREAMS: 1
+    EXPANSION_RATIO: 2
+    BRANCH:
+      NAME: null
+    STEM:
+      NAME: null
+    NONLOCAL:
+      ENABLE: false
+      STAGES: [5]
+      MASK_ENABLE: false
+    INITIALIZATION: null
+  
+  # 模型头部配置 - 使用我们的语义对齐模型
+  HEAD:
+    NAME: CNN_SEMANTIC_ALIGNMENT_SUPERVISED  # 全监督学习的语义对齐模型
+    ACTIVATION: softmax
+    DROPOUT_RATE: 0.0
+    NUM_CLASSES: 51
+    BACKBONE_NAME: RN50  # CLIP骨干网络（与原始项目一致）
+  
+  # 特征维度配置（与原始项目一致）
+  DIM1D: 256
+  DIM2D: 128
+  DIM3D: 512
+  BACKBONE_LAYER: 2
+  BACKBONE_GROUPS_NUM: 4
+
+# =============================================================================
+# 系统配置 - 与原始项目保持一致
+# =============================================================================
+NUM_GPUS: 1  # GPU数量（与原始项目一致）
+OUTPUT_DIR: output/CLIPFSAR_HMDB51_SEMANTIC_ALIGNMENT_SUPERVISED  # 输出目录
+
+# =============================================================================
+# 数据加载器配置 (DATA_LOADER) - 与原始项目保持一致
+# =============================================================================
+DATA_LOADER:
+  NUM_WORKERS: 0  # 数据加载工作进程数（与原始项目一致）
+  PIN_MEMORY: false  # 禁用内存固定（与原始项目一致）
+  ENABLE_MULTI_THREAD_DECODE: false  # 禁用多线程解码（与原始项目一致）
+
+# =============================================================================
+# 优化器配置 (SOLVER) - 与原始项目保持一致
+# =============================================================================
+SOLVER:
+  BASE_LR: 0.0002  # 基础学习率（与原始项目一致）
+  LR_POLICY: cosine  # 学习率策略（与原始项目一致）
+  WARMUP_EPOCHS: 10  # 预热轮数（与原始项目一致）
+  WARMUP_START_LR: 1e-06  # 预热起始学习率（与原始项目一致）
+  MAX_EPOCH: 300  # 最大训练轮数（与原始项目一致）
+  OPTIM_METHOD: adam  # 优化器方法（与原始项目一致）
+  MOMENTUM: 0.9  # 动量（与原始项目一致）
+  WEIGHT_DECAY: "1e-3"  # 权重衰减（与原始项目一致）
+  DAMPENING: 0.0  # 阻尼（与原始项目一致）
+  NESTEROV: true  # Nesterov动量（与原始项目一致）
+  STEPS_ITER: 700  # 学习率调整步数（与原始项目一致）
+  STEPS: [0, 4, 6]  # 学习率调整阶段（与原始项目一致）
+  LRS: [1, 0.1, 0.01]  # 各阶段学习率倍数（与原始项目一致）
+
+# =============================================================================
+# 验证配置
+# =============================================================================
+VAL:
+  BATCH_SIZE: 2
+  NUM_WORKERS: 4
+
+# =============================================================================
+# 日志配置
+# =============================================================================
+LOG:
+  LEVEL: "INFO"
+  SAVE_LOG: true
+
+# =============================================================================
+# 设备配置
+# =============================================================================
+DEVICE: "cuda"
+MULTI_GPU: false
+
+# =============================================================================
+# 随机种子
+# =============================================================================
+SEED: 42

@@ -1,0 +1,20 @@
+{
+  "config": "configs/projects/CLIPFSAR/ssv2_small/CLIPFSAR_SSv2_small_1shot_v1.yaml",
+  "checkpoint": "output_small/CLIPFSAR_SSv2_Small_1shot/checkpoints/checkpoint_epoch_00010.pyth",
+  "backbone_name": "ViT-B/16",
+  "target_layer": "head.backbone.conv1",
+  "episode_index": 4,
+  "query_index": 2,
+  "frame_index": -1,
+  "score_mode": "gt",
+  "pred_episode_class": 1,
+  "gt_episode_class": 1,
+  "target_episode_class": 1,
+  "pred_real_class": 1,
+  "gt_real_class": 1,
+  "target_real_class": 1,
+  "pred_name": "a pointed object is pressed against [something soft] then pushed through to make a hole",
+  "gt_name": "a pointed object is pressed against [something soft] then pushed through to make a hole",
+  "target_name": "a pointed object is pressed against [something soft] then pushed through to make a hole",
+  "save_root": "gradcam/CLIPFSAR_SSv2_small_1shot_v1/episode_0004/query_002"
+}

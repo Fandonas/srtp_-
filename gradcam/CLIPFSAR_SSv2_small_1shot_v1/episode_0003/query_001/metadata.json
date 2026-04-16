@@ -1,0 +1,20 @@
+{
+  "config": "configs/projects/CLIPFSAR/ssv2_small/CLIPFSAR_SSv2_small_1shot_v1.yaml",
+  "checkpoint": "output_small/CLIPFSAR_SSv2_Small_1shot/checkpoints/checkpoint_epoch_00010.pyth",
+  "backbone_name": "ViT-B/16",
+  "target_layer": "head.backbone.conv1",
+  "episode_index": 3,
+  "query_index": 1,
+  "frame_index": -1,
+  "score_mode": "gt",
+  "pred_episode_class": 0,
+  "gt_episode_class": 0,
+  "target_episode_class": 0,
+  "pred_real_class": 8,
+  "gt_real_class": 8,
+  "target_real_class": 8,
+  "pred_name": "[something] is released or dropped from a height then drifts slowly and gently downward through the air",
+  "gt_name": "[something] is released or dropped from a height then drifts slowly and gently downward through the air",
+  "target_name": "[something] is released or dropped from a height then drifts slowly and gently downward through the air",
+  "save_root": "gradcam/CLIPFSAR_SSv2_small_1shot_v1/episode_0003/query_001"
+}

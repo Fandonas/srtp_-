@@ -1,0 +1,13 @@
+{
+  "config": "configs/projects/CLIPFSAR/hmdb51/loss_p_rn50.yaml",
+  "checkpoint": "output/vit/vit_5shot_tem0.2/checkpoint_epoch_00001.pyth",
+  "split": "train",
+  "mode": "target_ctx_text",
+  "feature_dim": 512,
+  "num_points": 44,
+  "num_classes": 14,
+  "perplexity": 30.0,
+  "include_support": false,
+  "max_episodes": 3,
+  "max_points_per_class": 10
+}

@@ -1,0 +1,111 @@
+_BASE: ../OTAM_base.yaml
+TASK_TYPE: few_shot_action
+TRAIN:
+  ENABLE: true
+  USE_CLASSIFICATION: false
+  USE_CLASSIFICATION_VALUE: 3.0
+  DATASET: Ssv2_few_shot
+  META_BATCH: true  # meta or not
+  NUM_SAMPLES: 1000000
+  WAY: 5
+  SHOT: 5
+  QUERY_PER_CLASS: 2
+  QUERY_PER_CLASS_TEST: 1
+  NUM_TRAIN_TASKS: 30000
+  NUM_TEST_TASKS: 10000
+  VAL_FRE_ITER: 1000
+  BATCH_SIZE: 4  # Same with NUM_GPUS
+  CLASS_NAME: ["[something] is bent under applied force then deforms further until it snaps and breaks apart", "[something] is in an open state then pushed or pulled until it is fully closed", "[something] is visible and uncovered then [something] is placed on top so it is covered", "[something] is held above the area then released so it falls and lands behind [something]", "[something] is held above the area then released so it falls and lands in front of [something]", "[something] is held above [something] then released so it drops down into [something]", "[something] lies flat then one part is folded over onto the other part", "[something] is approached and grasped then held still without moving", "[something] is picked up then held in position next to [something]", "[something] is placed or given a push on a flat surface then rolls along the surface", "[something] is placed at the top of a slanted surface then rolls down along the slope", "the surface with [something] on top is tilted upward then [something] remains on it without sliding off", "[something] is resting on top of [something] then both are lifted upward together", "[something] is shown close in the frame then the camera moves back so [something] appears smaller and farther away", "[something] is pushed along the surface then continues to the edge and falls off", "two objects are separated from each other then both are moved closer until they are near each other", "two objects are moved toward each other then they meet and collide", "[something] is at a higher position then moved downward to a lower position", "[something] is at a lower position then moved upward to a higher position", "[something] is aligned with the opening of [something] then pushed in until fully connected", "a pointed object is pressed against [something soft] then pushed through to make a hole", "[something] is touched very lightly then stays almost completely still or barely shifts", "[something] is poked on one side then tips and falls over", "[something] is held above [something] and tilted then the contents flow down into [something]", "[something] is poured into [something] and filling continues then the level rises until it overflows", "[something] is tilted or tipped above [something] then the contents fall out and land on [something]", "both sides of [something that is not tearable] are pulled apart in a tearing motion then it remains intact without tearing", "[something] is in an open state then a closing motion is made toward it but it remains open", "[something] is approached from above as if being picked up then lifted away without taking it", "[something] is moved toward [something] in a placing motion then withdrawn without being set down", "a hand is moved above [something] in a spreading gesture then nothing is actually applied", "a hand reaches into [something] and pulls out as if removing something then nothing comes out", "[something] is beside [something] then dragged over and onto [something] so it rests on top", "both ends of [something] are pulled in opposite directions then [something] lengthens as it stretches", "both ends of [something] are pulled apart with force then [something] splits into two separate pieces", "[something] is on the left side then pushed so it slides across to the right side", "[something] is on top of [something] then pushed sideways until it goes over the edge and falls off", "[something] is on the table surface then pushed toward the edge until it slides off and drops down", "[something] is in a resting position then given a gentle push so it shifts only a small amount", "multiple [something] are placed one by one then each is set down onto [something]", "[something] and [something] are brought to the table then both are placed down onto the surface", "[something] is set on a slanted surface then stays in place without sliding down", "[something] is lifted above [something] then lowered and set down on top", "[something] is picked up then placed on the table alongside similar objects already there", "a photo of [something] is held up facing forward then displayed in front of the camera", "[something] is moved to a position at the back of [something] then held there so it is visible behind", "[something] and [something] move toward each other then collide and both change direction away", "a container of [something] is tilted or knocked then the contents spill out beside [something]", "a container of [something] is tilted or knocked over then the contents spill out onto [something]", "[something] starts spinning then slows down and comes to a complete stop quickly", "[something] is placed onto the surface of [something] then spread across it to cover the area", "[something] is gripped from both sides then pressed inward so it is squeezed and compressed", "[something] is held at the opening of [something] then pushed and packed inside", "[something] is located in [somewhere] then grasped and taken away from there", "both sides of [something] are pulled in opposite directions then [something] tears and separates into two pieces", "[something] with [something] on top is tilted to one side then held at that angle while [something] stays on", "[something] with [something] on top is tilted increasingly then [something] slides off and falls away", "[something] with contents inside is tipped over to one side then the contents fall out", "the camera is level with [something] then angled downward so [something] is viewed from above", "the camera is facing [something] then turned to the left so the view shifts leftward", "the camera is level with [something] then angled upward so [something] is viewed from below", "[something] wet is gripped at both ends then twisted and wrung repeatedly until water drips out", "[something] is held in place then rotated around its axis so it twists", "[something] is covered with [something] on top then the cover is lifted away to reveal [something]"]
+  BATCH_SIZE_PER_TASK: 4 #改 4
+  CHECKPOINT_FILE_PATH: ""
+  EVAL_PERIOD: 2
+  NUM_FOLDS: 1
+  SEMANTIC_COMBINE: true
+  TEXT_COFF: 0.5
+
+  SEMANTIC_LOSS_WEIGHT: 1
+  SEMANTIC_TEMPERATURE: 0.1
+  SEMANTIC_TRANSPOSE: false
+
+  USE_QUERY_EMBED_TRAIN: true
+  USE_QUERY_EMBED_EVAL: false
+
+  USE_MID_LAYER_TRAIN: false
+  USE_MID_LAYER_EVAL: false
+  USE_MID_LAYER2: false
+  USE_MID_LAYER2_SEMANTIC_TRAIN: false
+  USE_MID_LAYER2_SEMANTIC_EVAL: false
+
+  TRANSFORMER_DEPTH: 1
+  FREEZE_BACKBONE: false
+  USE_AMP: true
+
+AUGMENTATION:
+  COLOR_AUG: false
+  NO_RANDOM_ERASE: true
+
+TEST:
+  ENABLE: false
+  DATASET: Ssv2_few_shot
+  BATCH_SIZE: 4  # Same with NUM_GPUS
+  TEST_SET: val
+  CLASS_NAME: ["the camera is far from [something] then moves closer until [something] takes up more of the frame", "[something] is buried or embedded inside [something] then scooped and pulled out until removed", "[something] is held above the area beside [something] then released so it falls and lands next to [something]", "[something] is held above [something] then released so it drops and lands on top of [something]", "[something] is pushed toward the opening of [something] then fails to enter because it does not fit", "one end of [something] is lifted upward then held in the raised position without being let go", "[something] rests on a surface then is grasped and lifted off the surface", "a stack of [something] stands upright then is poked and the stack remains standing without collapsing", "[something] contains [something] inside then is tilted until the contents pour out", "[something] is in a closed state then a hand moves toward it as if opening but it stays closed", "[something] is moved toward the back of [something] in a placing gesture then pulled back without releasing", "[something] is moved toward the opening of [something] as if being inserted then pulled back before going in", "[something] is moved toward the space under [something] in a placing gesture then withdrawn without being placed", "a hand moves above [something] in a sprinkling motion then nothing actually falls onto [something]", "[something] is on the left then pulled so it slides from left to right", "[something] is inside [something] then pulled outward until it is completely removed", "[something] is on the right then pushed so it slides from right to left", "[something] is in front of [something] then moved away so [something] behind becomes visible", "[something] is picked up then held alongside [something] so both objects are visible at the same time", "[something] is held up or opened then shown to have nothing inside", "a container of [something] is tilted or knocked over then the contents spill out behind [something]", "[something] is inside [something] then reached in and pulled out completely", "[something] is tossed upward into the air then falls back down on its own", "[something] stands upright then pushed or nudged until it tips and falls over on its side"]
+  NUM_ENSEMBLE_VIEWS: 1
+  SPATIAL_CROPS: cctltr
+  AUTOMATIC_MULTI_SCALE_TEST: false
+  UPLOAD_CLASSIFIER_RESULTS: true
+
+DATA:
+  DATA_ROOT_DIR: ./ssv2/output1/ssv2_240p_mp4/
+  ANNO_DIR: ./configs/projects/CLIPFSAR/ssv2_full/
+  NUM_INPUT_FRAMES: 8 #改8
+  SAMPLING_RATE: 50
+  SAMPLING_UNIFORM: false
+  TRAIN_JITTER_SCALES: [256, 256]
+  TRAIN_CROP_SIZE: 224 # 84  # 224
+  TEST_CROP_SIZE: 224
+  MEAN: [0.48145466, 0.4578275, 0.40821073]
+  STD: [0.26862954, 0.26130258, 0.27577711]
+  TEST_SCALE: 256
+  TEST_CENTER_CROP: true
+  CLIP_INTERVAL: 8
+  FPS: 12
+  TARGET_FPS: 12
+
+LOG_PERIOD: 50
+SOLVER:
+  BASE_LR: 0.00005 
+  LR_POLICY: steps_with_relative_lrs
+  STEPS_ITER: 4000
+  STEPS: [0, 4, 6]
+  LRS: [1, 0.1, 0.01]
+  MAX_EPOCH: 10
+  MOMENTUM: 0.9
+  WEIGHT_DECAY: 5e-5
+  WARMUP_EPOCHS: 1
+  WARMUP_START_LR: 0.00001
+  OPTIM_METHOD: adam
+  DAMPENING: 0.0
+  NESTEROV: true
+# add bn, use same lr settings as server
+
+VIDEO:
+  HEAD:
+    NAME: CNN_SEMANTIC_ALIGNMENT_FEW_SHOT
+    ACTIVATION: softmax
+    DROPOUT_RATE: 0.0
+    NUM_CLASSES: 5  # Few-shot任务中的类别数（WAY）
+    BACKBONE_NAME: ViT-B/16
+
+  BACKBONE:
+    META_ARCH: Identity
+
+DATA_LOADER:
+  NUM_WORKERS: 32  # 数据加载工作进程数（与原始项目一致）
+  PIN_MEMORY: true  # 禁用内存固定（与原始项目一致）
+  ENABLE_MULTI_THREAD_DECODE: true  # 禁用多线程解码（与原始项目一致）
+
+NUM_GPUS: 4
+OUTPUT_DIR: output4/CLIPFSAR_SSv2_Full_SEMANTIC_ALIGNMENT_1shot
+
+

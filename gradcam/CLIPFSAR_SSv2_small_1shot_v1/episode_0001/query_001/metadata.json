@@ -1,0 +1,20 @@
+{
+  "config": "configs/projects/CLIPFSAR/ssv2_small/CLIPFSAR_SSv2_small_1shot_v1.yaml",
+  "checkpoint": "output_small/CLIPFSAR_SSv2_Small_1shot/checkpoints/checkpoint_epoch_00010.pyth",
+  "backbone_name": "ViT-B/16",
+  "target_layer": "head.backbone.conv1",
+  "episode_index": 1,
+  "query_index": 1,
+  "frame_index": -1,
+  "score_mode": "gt",
+  "pred_episode_class": 3,
+  "gt_episode_class": 3,
+  "target_episode_class": 3,
+  "pred_real_class": 18,
+  "gt_real_class": 18,
+  "target_real_class": 18,
+  "pred_name": "[something] is in a folded state then unfolded and opened out to its full extent",
+  "gt_name": "[something] is in a folded state then unfolded and opened out to its full extent",
+  "target_name": "[something] is in a folded state then unfolded and opened out to its full extent",
+  "save_root": "gradcam/CLIPFSAR_SSv2_small_1shot_v1/episode_0001/query_001"
+}

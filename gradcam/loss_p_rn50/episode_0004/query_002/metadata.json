@@ -1,0 +1,21 @@
+{
+  "config": "configs/projects/CLIPFSAR/hmdb51/loss_p_rn50.yaml",
+  "checkpoint": "output/vit/vit_5shot_tem0.2/checkpoint_epoch_00001.pyth",
+  "backbone_name": "ViT-B/16",
+  "use_amp": true,
+  "target_layer": "head.backbone.conv1",
+  "episode_index": 4,
+  "query_index": 2,
+  "frame_index": -1,
+  "score_mode": "gt",
+  "pred_episode_class": 0,
+  "gt_episode_class": 0,
+  "target_episode_class": 0,
+  "pred_real_class": 28,
+  "gt_real_class": 28,
+  "target_real_class": 28,
+  "pred_name": "a person faces one direction then rotates the body to turn",
+  "gt_name": "a person faces one direction then rotates the body to turn",
+  "target_name": "a person faces one direction then rotates the body to turn",
+  "save_root": "gradcam/loss_p_rn50/episode_0004/query_002"
+}

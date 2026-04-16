@@ -1,0 +1,17 @@
+{
+  "target_ctx": 150,
+  "selected_class_ids": [
+    0,
+    3,
+    8,
+    20,
+    23
+  ],
+  "selected_class_names": [
+    "a person raises a brush to their head then moves the brush through their hair repeatedly",
+    "a person raises both hands then brings the palms together to clap",
+    "a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble",
+    "a person sits on a horse then moves with the horse as it walks or runs",
+    "a person lies down on their back then curls the body upward in a situp"
+  ]
+}

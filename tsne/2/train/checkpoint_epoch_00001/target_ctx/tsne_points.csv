@@ -1,0 +1,151 @@
+x,y,label_id,label_name,source,episode_index
+-11.79526,5.889012,20,a person sits on a horse then moves with the horse as it walks or runs,target,2
+-9.717778,4.9430885,20,a person sits on a horse then moves with the horse as it walks or runs,target,2
+7.1613345,-4.27108,3,a person raises both hands then brings the palms together to clap,target,3
+7.017127,-3.761427,3,a person raises both hands then brings the palms together to clap,target,3
+7.32254,-4.8978066,3,a person raises both hands then brings the palms together to clap,target,4
+5.584326,-4.3159676,3,a person raises both hands then brings the palms together to clap,target,4
+-4.894221,-3.8456066,23,a person lies down on their back then curls the body upward in a situp,target,5
+-3.9014554,-5.0001955,23,a person lies down on their back then curls the body upward in a situp,target,5
+2.1172612,-7.8502364,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,6
+1.7731528,9.409699,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,6
+1.1673084,-8.561295,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,6
+1.8028361,9.252016,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,6
+5.6763706,-4.2687197,3,a person raises both hands then brings the palms together to clap,target,8
+7.4289546,-2.8849115,3,a person raises both hands then brings the palms together to clap,target,8
+6.187702,-3.2181466,3,a person raises both hands then brings the palms together to clap,target,9
+6.213123,-3.6512797,3,a person raises both hands then brings the palms together to clap,target,9
+5.5661206,-4.327279,3,a person raises both hands then brings the palms together to clap,target,10
+7.610928,-5.0954576,3,a person raises both hands then brings the palms together to clap,target,10
+2.105635,-6.8987765,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,11
+0.14490369,-9.049469,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,11
+-10.834954,6.3008647,20,a person sits on a horse then moves with the horse as it walks or runs,target,12
+-11.640395,5.348945,20,a person sits on a horse then moves with the horse as it walks or runs,target,12
+8.116052,-3.605956,3,a person raises both hands then brings the palms together to clap,target,13
+6.7574162,-4.685434,3,a person raises both hands then brings the palms together to clap,target,13
+7.4387126,-3.5351524,3,a person raises both hands then brings the palms together to clap,target,14
+7.9936857,-4.161925,3,a person raises both hands then brings the palms together to clap,target,14
+1.2257471,-7.879511,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,16
+1.3407633,-5.7639675,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,16
+1.0237656,8.435957,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,17
+-0.35300028,-6.13427,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,17
+0.037285946,10.233021,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,17
+0.97520727,-6.733477,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,17
+0.91512305,-8.314123,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,18
+1.4478561,-8.390881,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,18
+7.432638,-3.545339,3,a person raises both hands then brings the palms together to clap,target,19
+5.91132,-2.758908,3,a person raises both hands then brings the palms together to clap,target,19
+7.972098,-4.179946,3,a person raises both hands then brings the palms together to clap,target,21
+7.6450505,-3.9222448,3,a person raises both hands then brings the palms together to clap,target,21
+0.6198137,9.089222,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,24
+1.3762428,9.889475,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,24
+-11.230872,4.742688,20,a person sits on a horse then moves with the horse as it walks or runs,target,25
+-0.01139628,10.282561,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,25
+0.41395605,9.743559,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,25
+-12.334577,4.954269,20,a person sits on a horse then moves with the horse as it walks or runs,target,25
+-11.477399,4.786277,20,a person sits on a horse then moves with the horse as it walks or runs,target,27
+-12.702076,5.3023057,20,a person sits on a horse then moves with the horse as it walks or runs,target,27
+8.285962,-3.5466385,3,a person raises both hands then brings the palms together to clap,target,27
+4.710452,-6.5055394,3,a person raises both hands then brings the palms together to clap,target,27
+-7.264608,-5.282048,23,a person lies down on their back then curls the body upward in a situp,target,30
+6.806098,-4.1961923,3,a person raises both hands then brings the palms together to clap,target,30
+2.2529666,-5.1696954,3,a person raises both hands then brings the palms together to clap,target,30
+-4.9292827,-6.0006266,23,a person lies down on their back then curls the body upward in a situp,target,30
+-5.3944693,-4.332391,23,a person lies down on their back then curls the body upward in a situp,target,31
+-4.335214,-5.652599,23,a person lies down on their back then curls the body upward in a situp,target,31
+-4.1663404,-4.3316126,23,a person lies down on their back then curls the body upward in a situp,target,35
+-4.081122,-4.297119,23,a person lies down on their back then curls the body upward in a situp,target,35
+-10.408068,6.003229,20,a person sits on a horse then moves with the horse as it walks or runs,target,36
+-11.37601,5.6431136,20,a person sits on a horse then moves with the horse as it walks or runs,target,36
+-4.407402,-5.082136,23,a person lies down on their back then curls the body upward in a situp,target,37
+-7.297555,-5.2978196,23,a person lies down on their back then curls the body upward in a situp,target,37
+-12.551986,5.121569,20,a person sits on a horse then moves with the horse as it walks or runs,target,39
+8.088343,-4.217722,3,a person raises both hands then brings the palms together to clap,target,39
+-9.73079,4.9573317,20,a person sits on a horse then moves with the horse as it walks or runs,target,39
+-5.719893,-4.431847,23,a person lies down on their back then curls the body upward in a situp,target,39
+-5.4756565,-6.254858,23,a person lies down on their back then curls the body upward in a situp,target,39
+6.6315145,-3.3458614,3,a person raises both hands then brings the palms together to clap,target,39
+0.8615363,-8.268099,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,40
+1.1260164,-8.491863,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,40
+-6.23971,-3.8133812,23,a person lies down on their back then curls the body upward in a situp,target,40
+-4.159139,-4.3211155,23,a person lies down on their back then curls the body upward in a situp,target,40
+1.3951293,10.573294,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,42
+1.3209018,10.399469,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,42
+-11.224844,4.9335327,20,a person sits on a horse then moves with the horse as it walks or runs,target,44
+-12.40138,5.6467376,20,a person sits on a horse then moves with the horse as it walks or runs,target,44
+-5.254756,-3.863679,23,a person lies down on their back then curls the body upward in a situp,target,46
+-4.8166633,-5.214238,23,a person lies down on their back then curls the body upward in a situp,target,46
+0.109202586,8.265549,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,48
+1.7763684,9.385465,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,48
+6.3080664,-3.7208328,3,a person raises both hands then brings the palms together to clap,target,49
+4.823972,-6.4219785,3,a person raises both hands then brings the palms together to clap,target,49
+0.90147084,8.9863615,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,50
+0.8374134,10.1989975,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,50
+-12.411852,5.8686852,20,a person sits on a horse then moves with the horse as it walks or runs,target,51
+2.3514295,9.987176,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,51
+-10.091071,3.542451,20,a person sits on a horse then moves with the horse as it walks or runs,target,51
+1.3272771,10.263728,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,51
+0.1203628,-9.062545,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,53
+-0.027634982,-8.114979,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,53
+-5.353791,-5.251059,23,a person lies down on their back then curls the body upward in a situp,target,58
+-5.5966487,-5.558892,23,a person lies down on their back then curls the body upward in a situp,target,58
+1.6181767,-7.536267,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,60
+-0.31975105,-6.111642,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,60
+1.2619731,-7.579733,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,62
+-12.321516,5.9615636,20,a person sits on a horse then moves with the horse as it walks or runs,target,62
+-11.589301,4.8709917,20,a person sits on a horse then moves with the horse as it walks or runs,target,62
+-0.4995393,-7.7900977,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,62
+-6.120183,-5.0055304,23,a person lies down on their back then curls the body upward in a situp,target,66
+-5.2051487,-3.8026774,23,a person lies down on their back then curls the body upward in a situp,target,66
+-0.7217153,9.081054,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,67
+-0.042892583,10.114314,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,67
+-5.9826665,-3.7194598,23,a person lies down on their back then curls the body upward in a situp,target,68
+-5.39354,-5.5320096,23,a person lies down on their back then curls the body upward in a situp,target,68
+0.63770324,9.155245,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,69
+0.5928826,8.998735,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,69
+6.676073,-3.3513699,3,a person raises both hands then brings the palms together to clap,target,70
+7.514259,-4.598898,3,a person raises both hands then brings the palms together to clap,target,70
+-5.2037053,-3.979112,23,a person lies down on their back then curls the body upward in a situp,target,73
+1.2250731,8.651727,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,73
+-4.9160357,-5.0082307,23,a person lies down on their back then curls the body upward in a situp,target,73
+-0.15914607,10.210729,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,73
+2.763516,-6.700247,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,75
+1.3915309,-8.0516405,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,75
+-12.204684,6.144022,20,a person sits on a horse then moves with the horse as it walks or runs,target,76
+-9.909425,6.028878,20,a person sits on a horse then moves with the horse as it walks or runs,target,76
+-11.942881,4.4994836,20,a person sits on a horse then moves with the horse as it walks or runs,target,77
+2.471712,-7.7097034,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,77
+2.0625048,-8.708613,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,77
+-11.892661,5.246851,20,a person sits on a horse then moves with the horse as it walks or runs,target,77
+1.9585242,9.301264,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,79
+1.6835805,9.336959,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,79
+0.8312708,-7.886427,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,84
+2.3509905,-7.7824936,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,84
+7.854636,-4.228835,3,a person raises both hands then brings the palms together to clap,target,85
+6.735372,-4.8867083,3,a person raises both hands then brings the palms together to clap,target,85
+-5.78183,-5.090819,23,a person lies down on their back then curls the body upward in a situp,target,85
+-6.317281,-5.850729,23,a person lies down on their back then curls the body upward in a situp,target,85
+2.2271938,9.971897,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,86
+1.3308122,10.282656,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,86
+0.95403445,-8.647176,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,87
+1.1524748,-5.749958,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,87
+0.5013519,-7.4350324,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,89
+-6.0525684,-3.6352723,23,a person lies down on their back then curls the body upward in a situp,target,89
+-2.0323627,-5.6829605,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,89
+-6.0966964,-4.9860296,23,a person lies down on their back then curls the body upward in a situp,target,89
+-12.596065,5.5510774,20,a person sits on a horse then moves with the horse as it walks or runs,target,90
+-12.096488,5.705426,20,a person sits on a horse then moves with the horse as it walks or runs,target,90
+-4.304716,-5.590281,23,a person lies down on their back then curls the body upward in a situp,target,91
+-5.7785974,-5.109427,23,a person lies down on their back then curls the body upward in a situp,target,91
+-12.777207,4.90377,20,a person sits on a horse then moves with the horse as it walks or runs,target,94
+-10.725923,6.3179812,20,a person sits on a horse then moves with the horse as it walks or runs,target,94
+1.7601041,-7.0741787,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,96
+-0.16153847,-7.2675543,0,a person raises a brush to their head then moves the brush through their hair repeatedly,target,96
+0.88831156,9.580193,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,98
+2.4618042,9.349668,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,98
+-12.20143,5.056224,20,a person sits on a horse then moves with the horse as it walks or runs,target,101
+-9.675609,4.9390297,20,a person sits on a horse then moves with the horse as it walks or runs,target,101
+-10.09413,3.5619166,20,a person sits on a horse then moves with the horse as it walks or runs,target,102
+-11.686973,5.859873,20,a person sits on a horse then moves with the horse as it walks or runs,target,102
+1.3275713,10.152565,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,112
+-0.41267282,9.1787,8,a person moves forward with a ball then bounces the ball repeatedly on the ground to dribble,target,112

@@ -1,0 +1,21 @@
+{
+  "config": "configs/projects/CLIPFSAR/hmdb51/loss_p_rn50.yaml",
+  "checkpoint": "output/vit/vit_5shot_tem0.2/checkpoint_epoch_00001.pyth",
+  "backbone_name": "ViT-B/16",
+  "use_amp": true,
+  "target_layer": "head.backbone.conv1",
+  "episode_index": 3,
+  "query_index": 2,
+  "frame_index": -1,
+  "score_mode": "gt",
+  "pred_episode_class": 2,
+  "gt_episode_class": 2,
+  "target_episode_class": 2,
+  "pred_real_class": 26,
+  "gt_real_class": 26,
+  "target_real_class": 26,
+  "pred_name": "a person practices with a sword then performs repeated training movements as exercise",
+  "gt_name": "a person practices with a sword then performs repeated training movements as exercise",
+  "target_name": "a person practices with a sword then performs repeated training movements as exercise",
+  "save_root": "gradcam/loss_p_rn50/episode_0003/query_002"
+}
